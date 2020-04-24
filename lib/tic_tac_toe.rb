@@ -41,9 +41,9 @@ class TicTacToe
   end
 
   def turn
-    puts "Please pick a number from 1 through 9"
-    input = gets.to_i
-    index = input_to_index(input)
+    puts "Please enter 1-9:"
+    user_input = gets.strip
+    index = input_to_index(user_input)
     if valid_move?(index)
       move(index, current_player)
       display_board
@@ -51,6 +51,17 @@ class TicTacToe
       turn
     end
   end
+  # def turn
+  #   puts "Please pick a number from 1 through 9"
+  #   input = gets.to_i
+  #   index = input_to_index(input)
+  #   if valid_move?(index)
+  #     move(index, current_player)
+  #     display_board
+  #   else
+  #     turn
+  #   end
+  # end
 
   def turn_count
     count = 0
