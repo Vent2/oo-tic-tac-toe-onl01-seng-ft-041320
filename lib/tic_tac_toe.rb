@@ -22,11 +22,11 @@ class TicTacToe
   def input_to_index(input)
     @index = input.to_i - 1
   end
-  
+
   def move(index, token = "X")
     @board[index] = token
   end
-  
+
   def position_taken?(index)
     !(@board[index] == " " || @board[index] == "" || @board[index] == nil)
   end
@@ -40,7 +40,7 @@ class TicTacToe
           counter += 1
         end
     end
-    counter 
+    counter
   end
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
